@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_calculus"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="nitishpoddar1812.calculator.CalculusActivity"
+    tools:showIn="@layout/app_bar_calculus">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:layout_weight="2"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/derivative_pic"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:src="@drawable/derivative"
+            android:layout_weight="1"
+            android:gravity="center_horizontal|center_vertical"
+            android:textColor="@color/black"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/derivative_display"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:layout_weight="2"
+            android:gravity="center_vertical|start"
+            android:textColor="@color/black"
+            android:textSize="25sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="f(x) = "
+            android:textColor="@color/black"
+            android:textSize="25sp" />
+
+        <HorizontalScrollView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <EditText
+                android:id="@+id/function_enter"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="start|center"
+                android:hint="Enter function"
+                android:inputType="textFilter"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                android:typeface="serif" />
+        </HorizontalScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="x = "
+            android:textColor="@color/black"
+            android:textSize="25sp" />
+
+        <HorizontalScrollView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <EditText
+                android:id="@+id/x_value_enter"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="start|center"
+                android:hint="Enter Value"
+                android:inputType="textFilter"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                android:typeface="serif" />
+        </HorizontalScrollView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="n = "
+            android:textColor="@color/black"
+            android:textSize="25sp" />
+
+        <HorizontalScrollView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <EditText
+                android:id="@+id/degree_enter"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="start|center"
+                android:hint="Enter Value"
+                android:inputType="textFilter"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                android:typeface="serif" />
+        </HorizontalScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/calculateD"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/colorAccent"
+            android:onClick="callFunction"
+            android:text="Calculate"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/assign1"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/colorAccent"
+            android:onClick="callFunction"
+            android:text="Assign answer"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:layout_weight="2"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/integral_pic"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:gravity="center_horizontal|center_vertical"
+            android:src="@drawable/integral"
+            android:textColor="@color/black"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/integral_display"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:layout_weight="2"
+            android:gravity="start|center_vertical"
+            android:textColor="@color/black"
+            android:textSize="25sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="f(x) = "
+            android:textColor="@color/black"
+            android:textSize="25sp" />
+
+        <HorizontalScrollView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <EditText
+                android:id="@+id/function_enter2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="start|center"
+                android:hint="Enter function"
+                android:inputType="textFilter"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                android:typeface="serif" />
+        </HorizontalScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="a = "
+            android:textColor="@color/black"
+            android:textSize="25sp" />
+
+        <HorizontalScrollView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <EditText
+                android:id="@+id/lBound_enter"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="start|center"
+                android:hint="Enter Value"
+                android:inputType="textFilter"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                android:typeface="serif" />
+        </HorizontalScrollView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="b = "
+            android:textColor="@color/black"
+            android:textSize="25sp" />
+
+        <HorizontalScrollView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <EditText
+                android:id="@+id/uBound_enter"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="start|center"
+                android:hint="Enter Value"
+                android:inputType="textFilter"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                android:typeface="serif" />
+        </HorizontalScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/calculateI"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/colorAccent"
+            android:onClick="callFunction"
+            android:text="Calculate"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/assign2"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/colorAccent"
+            android:onClick="callFunction"
+            android:text="Assign answer"
+            android:textColor="@color/white" />
+    </LinearLayout>
+</LinearLayout>

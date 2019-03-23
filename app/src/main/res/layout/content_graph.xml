@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_graph"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="nitishpoddar1812.calculator.GraphActivity"
+    tools:showIn="@layout/app_bar_graph">
+
+    <Button
+        android:id="@+id/draw_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_bg3"
+        android:onClick="callGraph"
+        android:text="Draw"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+        android:textColor="@color/black"
+        android:typeface="monospace"
+        android:layout_alignParentBottom="true"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_above="@id/draw_button"
+        android:layout_alignParentTop="true">
+
+        <LinearLayout
+            android:id="@+id/func"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="y1(x)="
+                    android:textColor="@color/blue500"
+                    android:textSize="25sp" />
+
+                <HorizontalScrollView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <EditText
+                        android:id="@+id/y1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="start|center"
+                        android:hint="Enter function"
+                        android:textColor="@color/blue500"
+                        android:inputType="textFilter"
+                        android:textSize="17sp"
+                        android:typeface="serif" />
+                </HorizontalScrollView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="y2(x)="
+                    android:textColor="@color/green500"
+                    android:textSize="25sp" />
+
+                <HorizontalScrollView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <EditText
+                        android:id="@+id/y2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="start|center"
+                        android:hint="Enter function"
+                        android:textColor="@color/green500"
+                        android:inputType="textFilter"
+                        android:textSize="17sp"
+                        android:typeface="serif" />
+                </HorizontalScrollView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="y3(x)="
+                    android:textColor="@color/yellow500"
+                    android:textSize="25sp" />
+
+                <HorizontalScrollView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <EditText
+                        android:id="@+id/y3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="start|center"
+                        android:hint="Enter function"
+                        android:textColor="@color/yellow500"
+                        android:inputType="textFilter"
+                        android:typeface="serif"
+                        android:textSize="17sp" />
+                </HorizontalScrollView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="y4(x)="
+                    android:textColor="@color/orange500"
+                    android:textSize="25sp" />
+
+                <HorizontalScrollView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <EditText
+                        android:id="@+id/y4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="start|center"
+                        android:hint="Enter function"
+                        android:textColor="@color/orange500"
+                        android:inputType="textFilter"
+                        android:typeface="serif"
+                        android:textSize="17sp" />
+                </HorizontalScrollView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="y5(x)="
+                    android:textColor="@color/red500"
+                    android:textSize="25sp" />
+
+                <HorizontalScrollView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <EditText
+                        android:id="@+id/y5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="start|center"
+                        android:hint="Enter function"
+                        android:textColor="@color/red500"
+                        android:inputType="textFilter"
+                        android:typeface="serif"
+                        android:textSize="17sp" />
+                </HorizontalScrollView>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
